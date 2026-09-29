@@ -1,4 +1,4 @@
-package com.rayen.autoloc.domain;
+package tn.esprit.autoloc.domain;
 public enum StatutVehicule {
     DISPONIBLE, LOUE, MAINTENANCE
 }
