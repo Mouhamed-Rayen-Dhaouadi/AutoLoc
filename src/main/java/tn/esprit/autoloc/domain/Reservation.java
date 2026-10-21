@@ -1,5 +1,6 @@
 package tn.esprit.autoloc.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -35,6 +36,7 @@ public class Reservation {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "id_client", nullable = false)
     private Client client;
+    @JsonIgnore
     @OneToOne(mappedBy = "reservation", fetch = FetchType.LAZY)
     private Contrat contrat;
 }
